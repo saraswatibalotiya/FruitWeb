@@ -1,0 +1,626 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: #dae0b0; */
+}
+
+.home .carousel-item img {
+    width: 1385px;
+    height: 618px;
+}
+
+.translate-middle {
+    transform: translate(-50%,-45%)!important;
+}
+
+.rborder{
+    border: 0px;
+}
+
+.heading-text{
+    color: var(--text-black);
+    font-size: 2.5rem;
+    font-family: 'Staatliches', cursive;
+}
+:root{ 
+    /* Background Color */
+    --bg-danger:#f63440;
+    --bg-white:#fff;
+    --bg-light-white:#f5f5f5;
+
+    /* Text Color */
+    --primary-font:"Poppins", sans-serif;
+    --text-white:#fff;
+    --text-black:#121212; 
+    --text-danger:#f63440; 
+    --text-gray:#aaa;
+    --text-dark-gray:#777;
+
+    /* Background Color */
+    --primary-color: #FD4766;
+    --secondary-color: #0e1525;
+    --bg-dark-blue: #091020;
+    --bg-white: #fff;
+    --gray-color: #c6c9d8bf;
+    --gradient-color: linear-gradient(-224deg, var(--primary-color) 0, #337DFF 100%);
+    --gradient-text: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, var(--primary-color) 79.69%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1);
+
+    /* Text Color */
+    --primary-font:'Poppins', sans-serif;
+    --primary-text: #FD4766;
+    --text-gray: #c6c9d8bf;
+    --text-white: #fff;
+}  
+body {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    /* background:var(--bg-white); */
+    color: var(--text-black);
+    overflow-x:hidden;
+    font-family: var(--primary-font);
+    background-color: var(--secondary-color);
+} 
+
+/* Custom CSS */
+a,
+a:hover{
+    text-decoration: none;
+}
+p{
+    margin:0;
+}
+.btn-danger{
+    background:var(--bg-danger);
+    border-color:var(--bg-danger);
+    padding:0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.btn-danger:hover{
+    color:var(--text-danger);
+    background:transparent; 
+}
+
+
+
+
+/* ==================================================== Navigation css ====================================================*/
+
+#header .navbar-nav .nav-item .nav-link{
+    position: relative;
+    display: inline-block;
+    padding: .5rem 0 0.2rem;
+    font-size: 1rem;
+    /* color: black; */
+    text-transform: uppercase;
+    transition: all 500ms ease-in-out;
+    /* background-color:rgb(248, 246, 246); */
+
+
+}
+
+#header.navbar-icon a:hover{
+    color: #f63440;
+}
+#header.navbar-icon a{
+    color: #f63440;
+    transform: translate(1080px, 10px);
+
+
+}
+
+#header .usernav{
+    transform: translate(890px,10px);
+}
+
+#header .nav-icon a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transform: translate(900px, 10px);
+}
+
+
+#header .navbar-nav .nav-item  .nav-link::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background-color: var(--text-danger);
+    transition: transform 500ms;
+    transform: scaleX(0);
+    transform-origin: left;
+
+} 
+
+#header .navbar-nav .nav-item  .nav-link:hover::after{
+    transform:scaleX(1);
+    transform-origin: left;
+}
+
+
+
+#header .fixed-top{
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 5%);
+}
+
+#header .navbar-nav .nav-item .nav-link{
+    color:var(--text-black);
+    padding:0.5rem 1rem;
+    text-align: center;
+}
+
+
+
+#header .navbar-nav .nav-item .nav-link.active{
+    color:var(--text-danger);
+}
+#header .navbar-toggler-icon{
+    width:unset;
+    height:unset;
+}
+#header .navbar-toggler:focus{
+    box-shadow: none;
+}
+
+#header .navbar-brand{
+    color: var(--text-danger);
+    font-size: 2.0rem;
+    font-family: 'Lobster', cursive;
+    transform: translate(70px, 10px);
+}
+
+#header .ad-name :hover{
+    color: rgb(248, 246, 246);
+   
+}
+
+#header .nav-icon .ad{
+    text-decoration: none;
+    font-size: 1.0rem;
+}
+
+
+#header .nav-icon a{
+    color:rgb(248, 246, 246);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+.header-scrolled {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: var(--bg-dark-blue);
+    -webkit-box-shadow: 0 4px 6px 0 rgba(12, 0, 46, .05);
+    box-shadow: 0 4px 6px 0 rgba(12, 0, 46, .05);
+}
+
+.header-scrolled .nav-item .nav-link.active,
+.header-scrolled .nav-item .nav-link:hover {
+    color: var(--primary-text);
+}
+
+
+/* Carousel css */
+.home .carousel-item{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 90% center;
+    min-height: 550px;
+    position:relative;
+
+}
+.home.carousel-item img{
+    width: 1400px;
+    height: 400px;
+}
+
+.home .carousel-indicators [data-bs-target]{
+    background-color:var(--bg-danger);
+    width:2.5rem;
+    height:0.313rem;
+}
+
+.home .carousel-item img{
+    width: 1600px;
+    height: 650px;
+}
+.home .home-text {
+    top: 50%;
+    transform: translate(46%,-89%);
+} 
+.home .carousel-control-prev-icon,
+.home .carousel-control-next-icon{
+    height: 100px;
+    width: 100px;
+    background-image: none;
+}
+.home .carousel-control-next-icon:after
+{
+    content: '>';
+    font-size: 75px;
+    color: var(--bg-danger);
+}
+
+.home .carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 75px;
+    color: var(--bg-danger);
+}
+
+.home .carousel-item .slide3 h3{
+    color: var(--text-black);
+}
+
+/* Products */
+
+.shop .container hr{
+    width: 300px;
+    border: 3px solid black;
+    border-color: var(--bg-danger);
+    transform: translate(490px,4px);
+    
+
+}
+
+.shop h3,
+.brands h3,
+.features h3,
+.cart h3,
+.about h3{
+    color:#e9ecef;
+    font-size: 2.5rem;
+    font-family: 'Staatliches', cursive;
+}
+
+.shop .container .heading ,
+.cart .heading,
+.brands .container .heading,
+.about .container .heading,
+.services .container .heading,
+.contact .container .heading{
+    border: 0px;
+    background-color: var(--secondary-color);
+}
+
+
+.shop .card-title a{
+    transform: translate(-12px,170px);
+}
+
+
+.shop .btn-danger{
+    padding:0.8rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgb(102, 48, 48);
+    background:transparent; 
+
+}
+.shop .btn-danger:hover{
+    background:var(--bg-danger);
+    border-color:var(--bg-danger);
+    padding:0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bg-light-white);
+    
+}
+
+.features .container h3{
+    font-size: 2.5rem;
+}
+
+
+/* ================================================ services ========================================== */
+
+
+.services_wrapper .card {
+    background-color: var(--bg-dark-blue);
+    cursor: pointer;
+    transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+    box-shadow: 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+}
+
+.services_wrapper .card:hover {
+    box-shadow: 0px 2px 70px 0px rgb(253 71 102 / 5%);
+    transform: translateY(-5px);
+}
+
+
+/* ================================================ Banner ========================================== */
+
+.banner_wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 630px;
+    margin-top: 5%;
+    background-image: url('../images/slide2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 250px 0 100px 0;
+
+}
+
+/* .banner_wrapper .textf h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 85px;
+} */
+
+/* Category */
+
+.product2 .zoom{
+    overflow: hidden;
+}
+
+.product2 .zoom img{
+    transition: all 1.5s ease;
+}
+
+.product2 .zoom:hover img{
+    transform: scale(1.2);
+}
+
+/* =================================================alert messages ============================================ */
+
+
+/* ===============================================About Us ============================================ */
+
+.about p{
+    line-height: 190%;
+}
+
+
+.contact .container .contact-bg,
+.about .container .card-text{
+    /* background-color:  #e6e9cb; */
+    background-color: var(--bg-dark-blue);
+    cursor: pointer;
+    transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+    box-shadow: 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+}
+
+.about img{
+    display: block;
+    max-width: 100%;
+    height: auto; 
+    /* width: 70%;
+    height: 50%; */
+}
+/* Features */
+
+.features .btn-danger{
+    padding:0.4rem 1.5rem;
+   
+}
+
+/*================================================= Contact us ==============================================*/
+
+/* .address p{
+    font-weight: 400;
+  
+}
+
+
+
+.contact .contact-color{
+    background-color:  #e6e9cb;
+} */
+
+.login .container label{
+    color: var(--bg-white);
+
+}
+
+.login .alert{
+    background-color: #17203a;
+    /* border: 0px; */
+
+}
+
+
+.login .container .card-text{
+    /* background-color:  #e6e9cb; */
+    /* background-color: #121b30; */
+    background-color: #17203a;
+    cursor: pointer;
+    transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+    box-shadow: 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+}
+
+.login .container .form-control,
+.login .container textarea,
+.contact_wrapper .form-control,
+.contact_wrapper textarea {
+    background-color: transparent;
+    border-color: var(--gray-color);
+    color: var(--bg-white);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 20px;
+}
+
+/* .contact_wrapper .form-control:hover,
+.contact_wrapper textarea:hover, */
+
+.login .form-control:focus,
+.login textarea:focus,
+.contact_wrapper .form-control:focus,
+.contact_wrapper textarea:focus { 
+    border-color: var(--primary-color);
+    color: var(--text-white); 
+}  
+.contact_wrapper .call_details{
+    color:var(--text-gray);
+}
+.contact_wrapper .call_details a{
+    font-weight: 700;
+    color:var(--text-gray);
+}
+
+
+
+/* .contact .container{
+   
+    background-color: rgba(250, 165, 128, 0.5);
+} */
+
+  /* ==========================================footer ======================================*/
+.full-footer{
+    background-color:  	 #e0e0eb;
+ 
+  
+   
+}
+
+/* =============================================== Register ================================== */
+
+.register .card-regis{
+    background-color: var(--bg-dark-blue);
+}
+
+
+/* ==================================================== LOGIN =================================================== */
+.login .card .register a:hover{
+    color:red;
+}
+/* 
+.login .card input{
+
+    border-radius: 20px;
+} */
+
+/* ==================================================== navbar badge ================================================ */
+
+.badge{
+    color: black;
+    border: black;
+    background: #e9ecef;
+    transform: translate(-3px, -11px);
+    border-radius: 58px;
+}
+
+/* ======================================================= cart ============================================================= */
+.cart .cart-input-qty input::-webkit-outer-spin-button,
+.cart .cart-input-qty input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  background-color: var(--bg-dark-blue);
+}
+
+/* Firefox */
+.cart .cart-input-qty  input[type=number] {
+  -moz-appearance: textfield;
+  width:30px;
+  border: none;
+  text-align: center;
+}
+
+.cart .cart-input-qty .fas{
+    color: var(--text-danger);
+    border: none;
+
+}
+
+.cart .remove-item a{
+    transform: translate(8px, -30px);
+}
+
+/* ==================================== cart ====================================================== */
+.cart-quantityy h5{
+    transform: translate(20px, -1px);
+
+}
+
+.cart .cardpro{
+    background-color: var(--bg-dark-blue);
+}
+
+.cart-price-name h5{
+    transform: translate(-260px, -1px);
+}
+
+.total{
+    text-align: right;
+}
+
+/* ================================================== icons in admin ====================================================== */
+
+.dashboard a,
+a:hover{
+    text-decoration: none;
+    color: rgb(248, 241, 241);
+
+}
+.dashboard .btn-outline-info  {
+    color: black;
+    background-color: #17203a;
+}
+
+.dashboard .btn-outline-info :hover {
+    color: rgb(233, 21, 21);
+}
+
+.adminNav .logout{
+    transform: translate(1100px, 1px);
+    color: white;
+}
+
+.admin .container .card .form-control,
+.admin .container .card textarea {
+    background-color: transparent;
+    border-color: var(--gray-color);
+    color: var(--bg-white);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 20px;
+}
+
+.admin.container .card .form-control:focus,
+.admin .container .card textarea:focus{ 
+    border-color: var(--primary-color);
+    color: var(--text-white); 
+} 
+
+.admin .admin-update{
+    background-color: var(--bg-dark-blue);
+}
+
+/* * Custom CSS */
+/* .dashboard a,
+a:hover{
+    text-decoration: none;
+} */ 
+
+/* =========================================== select option ======================================================================== */
+#styled-select select {
+    background: transparent;
+    width: 260px;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
+    -webkit-appearance: none;
+    font-family:helvetica-roman;
+    color:#5e5c5c;   
+     background-color: rgba(0, 0, 0, 0);
+     -webkit-appearance: none;
+     border: none;
+     text-indent: 0.01px;
+     text-overflow: '';
+ }

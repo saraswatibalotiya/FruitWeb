@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>head}}
+</head>
+
+<body>
+
+    {{!-- navbar --}}
+    {{!-- {{>adminNavbar}} --}}
+    <section class="header" style="background: #0e1525;">
+        <nav class="navbar navbar-expand-lg navbar-dark  mb-5">
+            <div class="container ">
+                <a class="navbar-brand text-light" href="/adminDashboard">ADMIN</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav navbarSupportedContent">
+                    <div class="text-center nav-icon d-flex adminNav">
+                        {{#if user }}
+                        {{!-- for post request of logut we have to create a form with post --}}
+                        <form class="d-flex" id="logout" action="/logout" method="POST">
+                            <button type="button" class=" mx-3 text-center me-2 logout btn btn-success"
+                                onclick="document.getElementById('logout').submit()">Logout</button>
+                            {{!-- <a class="fas fa-sign-out-alt mx-3 text-center me-2 logout btn-info"
+                                onclick="document.getElementById('logout').submit()" href="#">
+                                <h6>Logout</h6>
+                            </a> --}}
+                        </form>
+                        {{else}}
+                        <a class="fas fa-user mx-3 text-center" href="/login"></a>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <div class="admin" style="background: #0e1525;">
+        <div class="container admin admin-update " style="background: #0e1525;">
+            <h2 class="text-center text-light">Update Product</h2>
+            <div class="card card-text  mt-4 shadow text-light" style="background: #0e1525;">
+                <div class="card-body mb-4 col-12">
+                    {{#if messages.error}}
+                    <div class="alert alert-light text-danger">
+                        <p>{{ messages.error }}</p>
+                    </div>
+                    {{/if}}
+                    <form action="" method="POST" id="update-product">
+                        <input type="hidden" name="_id" value="{{products._id}}">
+
+                        {{!-- {{#each products}} --}}
+                        <div class="mb-3 text-center">
+                            <img src="/images/{{products.image}}" width="100px" height="100px" alt="{{products.image}}"
+                                id="image" name="image" class="text-center">
+                            {{!-- <img src="images/pic6.png" width="100px" height="100px" alt="{{products.image}}"
+                                id="image" name="image"> --}}
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" id="pname" name="name" value="{{products.name}}"
+                                placeholder="Enter Product Name">
+                            <div class="text-danger">{{products.nameError}}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Category
+                                (Fruits,Vegetables,sprouts,seasonal)
+                            </label>
+                            <input type="text" class="form-control" id="category" name="category"
+                                value="{{products.category}}" placeholder="Enter Product Category">
+                            <div class="text-danger">{{products.categoryError}}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Upload Image</label>
+                            {{!-- value="/images/{{products.image}}" --}}
+                            <input class="form-control" type="file" id="image" name="image"
+                                src="images/{{products.image}}">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Price</label>
+                            <input type="text" class="form-control" id="price" name="price" value="{{products.price}}"
+                                placeholder="Enter Product Price">
+                            <div class="text-danger">{{products.priceError}}</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Stock</label>
+                            <input type="text" class="form-control" id="stock" name="stock" value="{{products.stock}}"
+                                placeholder="Enter Product Stock">
+                            <div class="text-danger">{{products.priceError}}</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary text-center" type="submit " value="register">UPDATE
+                                PRODUCT</button>
+                        </div>
+                        {{!-- {{/each}} --}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
